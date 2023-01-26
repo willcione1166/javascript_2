@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/multplication_app/style.css">
+    <title>Maths</title>
+</head>
+<body> 
+    
+    <h2>Maths Multiplier</h2>
+    <form id="form">
+        <h4 class="score" id="score">score: 0</h4>
+        <h1 id="question">Whats 1 * 1?</h1>
+        <input type="text" class="input" id="input" placeholder="Enter Your Answer" autofocus autocomplete="off">
+        <button class="btn" type="submit">Submit</button>
+        <button id="res" class="btn" type="reset">Reset</button>
+        
+    </form>
+    <script>
+
+const questionElement = document.getElementById("question");
+const inputElement = document.querySelectorAll("input");
+const formElement = document.getElementById("form");
+const scoreEl = document.getElementById("score");
+const resetBtn = document.getElementById("res");
+
+const ranNum = Math.floor(Math.random() * 10) + 1;
+const randomNum =Math.ceil(Math.random() * 10) + 1;
+
+ let score = window.JSON.parse(localStorage.getItem("score"));
+//score = JSON.parse(localStorage.getItem("score"));
+console.log(score)
+const getUserFromLocalStorage = () => {
+    try {
+        return JSON.parse(localStorage.getItem('score') || '');
+    } catch (error) {
+        return null;
+    }
+};
+
+var KeyName = window.localStorage.key(score);
+if (!score){
+    score =  0;
+}else{score ++ ?? score--}
+scoreEl.innerText = `score: ${score}`;
+questionElement.innerText = `What is ${ranNum} multiplied by ${randomNum}?`;
+
+let scoreArray = [];
+
+const correctAnswer = ranNum * randomNum;
+
+const submitBtn = document.getElementById("submit");
+
+
+var myform = document.getElementById('form');
+myform.onsubmit = function(){
+   
+    updateLocalStorage();
+    console.log(score);
+    const userAns = +inputElement.value;
+    if(userAns === correctAnswer){
+        console.log(userAns);
+    console.log(correctAnswer);
+        score++
+    } else {
+        console.log(userAns);
+    console.log(correctAnswer);
+        score--;
+
+    myform.submit();
+}};
+
+formElement.addEventListener("submit",(e) => {
+    e.preventDefault();
+   
+    updateLocalStorage();
+    console.log(score);
+    const userAns = inputElement.value;
+    console.log(userAns);
+    console.log(correctAnswer);
+    console.log(userAns);
+    console.log(correctAnswer);
+    console.log(userAns);
+    console.log(correctAnswer);
+    if(userAns === correctAnswer){
+        console.log(userAns);
+    console.log(correctAnswer);
+        scoreEl.value ++;
+        score++
+        score++;
+        console.log(typeof score);
+        console.log(e);
+        console.log(score++);
+        console.log(score);
+    } else {
+        console.log(userAns);
+    console.log(correctAnswer);
+        score--;
+        score--;
+        console.log(score--);
+        console.log(score);
+        console.log(userAns); 
+ }});
+   resetBtn.onclick = () => {
+    scoreEl.value = 0;
+    window.localStorage.clear();
+    score = 0;
+    scoreEl.innerText = 'Score:' + score;
+    
+   };
+  
+         myform.submit = (event) => {
+            window.localStorage.setItem(score, JSON.stringify(score));
+         console.log('fn updateLocalStorage');
+        }
+        
+    function updateLocalStorage(e){
+        window.localStorage.setItem(score, JSON.stringify(score));
+         console.log('fn updateLocalStorage');
+        }
+ 
+
+
+    </script>
+   <script src="" defer></script>
+</body>
+</html>

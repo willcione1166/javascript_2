@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    background: url("https://plus.unsplash.com/premium_photo-1669927131902-a64115445f0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80");
+    background-size: cover;
+    overflow: hidden;
+}
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    color: rgb(241, 247, 186);
+    background: rgb(49, 49, 97);
+    opacity: .8;
+}
+.clock{
+    text-transform: uppercase;
+    display: flex;
+    color: rgb(232, 253, 43);
+
+}
+.clock div{
+    margin: 5px;
+    position: relative;
+
+}
+.clock span{
+    width: 100px;
+    height: 80px;
+    background-color: rgb(59, 85, 88);
+    opacity: .8;
+    color: rgb(118, 169, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px black;
+    
+}
+.clock .text{
+    height: 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgb(66, 66, 99);
+    opacity: .8;
+}
+.clock #ampm{
+    bottom: 0;
+    position: absolute;
+    width:68px;
+    height: 43px;
+    font-size: 29px;
+    background: rgb(72, 72, 114);
+    opacity:.8;
+    color:rgb(111, 176, 250)
+
+}
