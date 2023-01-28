@@ -1,15 +1,43 @@
 html{
 
 }
+.wrapper {
+   
+   }
 body {
     background-color: grey;
 }
 h1{
     font-size:27px;
-    position: absolute;
+    position: absolute; 
     top:2px;
     left: 5%;
     color: white;
+}
+.textual{
+    color: white;
+    font-size: 20px;
+    width: 150px;
+    background: rgb(102, 97, 97);
+    word-break: break-word;
+
+}
+#item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#item0{
+   
+    height: 400px;
+    width: 500px;
+    background-color: rgb(40, 41, 40);
+
+}
+#item1{
+    height: 400px;
+    width: 500px;
+    background-color: rgb(66, 66, 65);
+
 }
 .todo-container{
     position: absolute;
@@ -45,7 +73,7 @@ h1{
 }    
 
 .todo-content{
-    display:grid;
+    display:flex;
     position: absolute;
     grid-template-columns: 1fr 1fr;
     top: 70px;
